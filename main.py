@@ -47,6 +47,8 @@ for chunk in chunks_no_space:
 print('Permutations --------------------------------')
 print(permutations)
 
+print('First solution --------------------------------')
+
 sparql = SPARQLWrapper("http://dbpedia.org/sparql")
 for perm in permutations:
     for pair in perm:

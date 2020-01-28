@@ -32,12 +32,6 @@ def parse_file(file, only_sentences=False):
         return meta, sentences
 
 
-def ie_preprocess(document):
-    sentences = [nltk.word_tokenize(sent) for sent in document]
-    sentences = [nltk.pos_tag(sent) for sent in sentences]
-    return sentences
-
-
 def process_using_spacy(sent, en_core, format_result):
     entities = en_core(sent).ents
     if format_result:
